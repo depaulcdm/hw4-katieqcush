@@ -6,11 +6,11 @@ Ant is the eldest of the various Java build automation frameworks and it is stil
 ### Setup
 
 #### Install Ant
-Download and install Apache Ant (version 1.10.5) from:\\
+Download and install Apache Ant (version 1.10.7) from:\\
 
 https://ant.apache.org/bindownload.cgi
 
-To verify that Ant has been installed correctly, run the following command on the command line to verify that it is version 1.10.5:
+To verify that Ant has been installed correctly, run the following command on the command line to verify that it is version 1.10.7:
 
 ```
 ant -v
@@ -24,9 +24,6 @@ Unlike Ant, we don't generally use Ivy as a standalone tool. Instead, we use it 
 3. Copy the [ivy.jar](tools/ivy/ivy.jar) file from the [tools/ivy](tools/ivy) directory to your `<ANT-HOME>/lib` directory.
 4. Run the ant script with the `go-nodeps` target to confirm that Ivy works:
   `ant go-nodeps`
-
-_**Note:** We're using version 2.4.0 of Ivy, which is a slightly older version. The current version is 2.5.0-RC1, but I try to only have you use GA releases of the tools._
-
 
 ### Complete the Build Script
 In this section, you will get some basic experience in writing Ant scripts. You will focus on completing the sections of the files -- `build.xml` and `ivy.xml` -- marked with **TODO** comments.
@@ -47,11 +44,11 @@ java -jar target/hello-world-all-1.0-SNAPSHOT.jar
 
 ## Maven
 ### Setup
-Download and install Apache Maven (version 3.6.0) from:
+Download and install Apache Maven (version 3.6.3) from:
 
 https://maven.apache.org/download.cgi
 
-To verify that Maven has been installed correctly, run the following command on the command line to verify that it is 3.6.0:
+To verify that Maven has been installed correctly, run the following command on the command line to verify that it is 3.6.3:
 
 ```
 mvn -v
@@ -76,13 +73,13 @@ java -jar target/hello-world-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 ## Gradle
 ### Setup
-Download and install Gradle (version 5.1.1) from:
+Download and install Gradle (version 6.1.1) from:
 
 https://gradle.org/releases/
 
 _**Note:** You can use either the "binary-only" or the "complete" release. The complete is bigger but provides lots of samples. I'm partial to Gradle so that's the one I choose. My biases don't need to affect your behavior in this case._
 
-To verify that Gradle has been installed correctly, run the following command on the command line to verify that it is 5.1.1:
+To verify that Gradle has been installed correctly, run the following command on the command line to verify that it is 6.1.1:
 
 ```
 gradle -v
