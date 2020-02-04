@@ -3,7 +3,7 @@
 	<!--
 	TODO: Define two configurations: 'compile' and 'test'. The 'compile'
 	configuration should have public visibility while the 'test'
-	configuration should be private.
+	configuration should be private and extend the 'compile' configuration.
 	-->
 	<configurations>
 	</configurations>
@@ -17,11 +17,12 @@
 	
 	The structure of an Ivy dependency is as follows:
 	
-    <dependency conf="..." org="..." name="..." rev="..." />
+        <dependency conf="..." org="..." name="..." rev="..." />
 	
 	where org is the same as the Maven groupId, name is the same
 	as the Maven artifactId, and rev is the same as the Maven
-	version.
+	version, and conf is the above configuration that the
+        dependency will belong to.
 	-->	
     <dependencies defaultconf="compile">
     </dependencies>
