@@ -6,11 +6,11 @@ Ant is the eldest of the various Java build automation frameworks and it is stil
 ### Setup
 
 #### Install Ant
-Download and install Apache Ant (version 1.10.7) from:\\
+Download and install Apache Ant (version 1.10.9) from:
 
 https://ant.apache.org/bindownload.cgi
 
-To verify that Ant has been installed correctly, run the following command on the command line to verify that it is version 1.10.7:
+To verify that Ant has been installed correctly, run the following command on the command line to verify that it is version 1.10.9:
 
 ```
 ant -v
@@ -73,20 +73,20 @@ java -jar target/hello-world-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 ## Gradle
 ### Setup
-Download and install Gradle (version 6.1.1) from:
+Download and install Gradle (version 6.8.1) from:
 
 https://gradle.org/releases/
 
 _**Note:** You can use either the "binary-only" or the "complete" release. The complete is bigger but provides lots of samples. I'm partial to Gradle so that's the one I choose. My biases don't need to affect your behavior in this case._
 
-To verify that Gradle has been installed correctly, run the following command on the command line to verify that it is 6.1.1:
+To verify that Gradle has been installed correctly, run the following command on the command line to verify that it is 6.8.1:
 
 ```
 gradle -v
 ```
 
 ### Complete the Build Script
-In this section, you will get some basic experience in writing Maven scripts. You will focus on completing the sections of the scripts -- `build.gradle` -- marked with **TODO** comments.\\
+In this section, you will get some basic experience in writing Maven scripts. You will focus on completing the sections of the scripts -- `build.gradle` -- marked with **TODO** comments.
 
 _**Note:** The scripts will work as long as the TODOs are addressed -- you should not need to modify any other part of the script._
 
