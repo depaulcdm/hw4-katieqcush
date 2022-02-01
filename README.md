@@ -93,7 +93,7 @@ _**Note:** The scripts will work as long as the TODOs are addressed -- you shoul
 To test the build script, just use the following Maven command (we're not using the `install` goal since we don't really need this installed into our local repository):
 
 ```
-gradle clean fatJar
+gradle jar
 ```
 
 To execute the packaged JAR, you can use the following command:
