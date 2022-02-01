@@ -6,11 +6,11 @@ Ant is the eldest of the various Java build automation frameworks and it is stil
 ### Setup
 
 #### Install Ant
-Download and install Apache Ant (version 1.10.9) from:
+Download and install Apache Ant (version 1.10.10) from:
 
 https://ant.apache.org/bindownload.cgi
 
-To verify that Ant has been installed correctly, run the following command on the command line to verify that it is version 1.10.9:
+To verify that Ant has been installed correctly, run the following command on the command line to verify that the version is correct:
 
 ```
 ant -v
@@ -44,11 +44,11 @@ java -jar target/hello-world-all-1.0-SNAPSHOT.jar
 
 ## Maven
 ### Setup
-Download and install Apache Maven (version 3.6.3) from:
+Download and install Apache Maven (version 3.8.4) from:
 
 https://maven.apache.org/download.cgi
 
-To verify that Maven has been installed correctly, run the following command on the command line to verify that it is 3.6.3:
+To verify that Maven has been installed correctly, run the following command on the command line to verify that the version is correct:
 
 ```
 mvn -v
@@ -73,13 +73,13 @@ java -jar target/hello-world-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 ## Gradle
 ### Setup
-Download and install Gradle (version 6.8.1) from:
+Download and install Gradle (version 7.3.3) from:
 
 https://gradle.org/releases/
 
 _**Note:** You can use either the "binary-only" or the "complete" release. The complete is bigger but provides lots of samples. I'm partial to Gradle so that's the one I choose. My biases don't need to affect your behavior in this case._
 
-To verify that Gradle has been installed correctly, run the following command on the command line to verify that it is 6.8.1:
+To verify that Gradle has been installed correctly, run the following command on the command line to verify that the version is correct:
 
 ```
 gradle -v
@@ -107,3 +107,4 @@ java -jar build/libs/hello-world-all-1.0-SNAPSHOT.jar
 1. Add your screen captures to a new [images](images) directory.
 2. Update the file, [SUBMISSION.md](SUBMISSION.md).
 3. Commit all of your code changes, the [images](images) directory, and the updated [SUBMISSION.md](SUBMISSION.md) to your remote Github repository.
+4. Verify that all of your images are displaying in the [SUBMISSION.md](SUBMISSION.md) page. I want to see the images, not the links to the images.

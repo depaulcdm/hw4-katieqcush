@@ -27,16 +27,6 @@
 	  and the ID of the second should be 'test.classpath'.
 	  -->
     </target>
-
-    <target name="copy-dependencies">
-      <mkdir dir="${build.lib.dir}" />
-	  <jar jarfile="${build.lib.dir}/dependencies-all.jar">
-	    <!--
-		TODO: Create a zipgroupfileset that references the 'compile.classpath' fileset
-		created in the "resolve" target above.
-		-->
-      </jar>
-	</target>
 	
 	<!--
 	TODO: Make this target depend on the 'clean' and 'resolve' targets.
@@ -58,7 +48,7 @@
 	  <mkdir dir="${classes.test.dir}"/>
 	  <javac srcdir="${src.test.dir}" destdir="${classes.test.dir}">
 	    <!--
-		TODO: Define the classpath to be a combination of the 'test.classpath' fileset
+		TODO: Define the classpath to be a combination of the 'compile.classpath' fileset
 		created by the "resolve" target above, a pathelement of the 'classes.dir' property,
 		and a second pathelement of the 'classes.test.dir' property.
 		-->
@@ -69,7 +59,7 @@
 	  <mkdir dir="${reports.dir}"/>
       <junit printsummary="yes" haltonfailure="yes">
 	    <!--
-		TODO: Define the classpath to be a combination of the 'test.classpath' fileset
+		TODO: Define the classpath to be a combination of the 'compile.classpath' fileset
 		created by the "resolve" target above, a pathelement of the 'classes.dir' property,
 		and a second pathelement of the 'classes.test.dir' property.
 		-->
@@ -85,15 +75,15 @@
 	</target>
 
 	<!--
-	TODO: Make this target depend on the 'test' and 'copy-dependencies'
-	targets.
+	TODO: Make this target depend on the 'test' target.
 	-->
 	<target name="jar">
+      <ivy:cachefileset setid="hello.runclasspath" conf="compile" />
       <jar destfile="${jar.file}" basedir="${classes.dir}">
 		<manifest>
 		  <attribute name="Main-Class" value="hello.HelloWorld"/>
 		</manifest>
-        <zipfileset src="${build.lib.dir}/dependencies-all.jar" />
+        <zipgroupfileset refid="hello.runclasspath"/>
 	  </jar>
 	</target>
 </project>
