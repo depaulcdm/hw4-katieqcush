@@ -14,16 +14,3 @@ similar to the one shown in class.
 Remember to use the 'java' plugin. You can reference the
 Maven Central repository.
 */
-
-task fatJar(type: Jar) {
-    baseName = project.name + '-all'
-    from { 
-	  configurations.compile.collect { 
-	    it.isDirectory() ? it : zipTree(it)
-	  }
-	}
-    with jar
-    manifest {
-        attributes 'Main-Class': 'hello.HelloWorld'
-    }
-}
