@@ -48,7 +48,7 @@
 	  <mkdir dir="${classes.test.dir}"/>
 	  <javac srcdir="${src.test.dir}" destdir="${classes.test.dir}">
 	    <!--
-		TODO: Define the classpath to be a combination of the 'compile.classpath' fileset
+		TODO: Define the classpath to be a combination of the 'test.classpath' fileset
 		created by the "resolve" target above, a pathelement of the 'classes.dir' property,
 		and a second pathelement of the 'classes.test.dir' property.
 		-->
@@ -57,33 +57,31 @@
 
 	<target name="test" depends="test-compile">
 	  <mkdir dir="${reports.dir}"/>
-      <junit printsummary="yes" haltonfailure="yes">
+          <junit printsummary="yes" haltonfailure="yes">
 	    <!--
-		TODO: Define the classpath to be a combination of the 'compile.classpath' fileset
-		created by the "resolve" target above, a pathelement of the 'classes.dir' property,
-		and a second pathelement of the 'classes.test.dir' property.
-		-->
-
-		<formatter type="plain" />
-        
-		<batchtest fork="yes" todir="${reports.dir}">
-          <fileset dir="${src.test.dir}">
-            <include name="**/*Test.java"/>
-          </fileset>
-		</batchtest>
-      </junit>
+            TODO: Define the classpath to be a combination of the 'test.classpath' fileset
+            created by the "resolve" target above, a pathelement of the 'classes.dir' property,
+            and a second pathelement of the 'classes.test.dir' property.
+            -->
+            <formatter type="plain" />        
+            <batchtest fork="yes" todir="${reports.dir}">
+              <fileset dir="${src.test.dir}">
+                <include name="**/*Test.java"/>
+              </fileset>
+            </batchtest>
+          </junit>
 	</target>
 
 	<!--
 	TODO: Make this target depend on the 'test' target.
 	-->
 	<target name="jar">
-      <ivy:cachefileset setid="hello.runclasspath" conf="compile" />
-      <jar destfile="${jar.file}" basedir="${classes.dir}">
-		<manifest>
-		  <attribute name="Main-Class" value="hello.HelloWorld"/>
-		</manifest>
-        <zipgroupfileset refid="hello.runclasspath"/>
+          <ivy:cachefileset setid="hello.runclasspath" conf="compile" />
+          <jar destfile="${jar.file}" basedir="${classes.dir}">
+            <manifest>
+              <attribute name="Main-Class" value="hello.HelloWorld"/>
+            </manifest>
+            <zipgroupfileset refid="hello.runclasspath"/>
 	  </jar>
 	</target>
 </project>
