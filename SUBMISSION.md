@@ -52,7 +52,7 @@ hw4-katieqcush/hello-world/ivy.xml
 
 - [10 pts] Links to the complete and correct [hello-world/pom.xml](hello-world/pom.xml) file.
 
-
+hw4-katieqcush/hello-world/pom.xml
 
 # Gradle [30 pts]
 - [5 pts]A screen capture showing the version of Gradle that you installed and its install directory.
@@ -66,3 +66,5 @@ hw4-katieqcush/hello-world/ivy.xml
 - [5 pts] A screen capture showing a successful execution of the JAR file created from the Gradle build.
 
 - [10 pts] Links to the complete and correct [hello-world/build.gradle](hello-world/build.gradle) file.
+
+hw4-katieqcush/hello-world/build.gradle
