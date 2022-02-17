@@ -31,6 +31,8 @@ The first argument is the Alt-text for the image. The second argument is the pat
 
 - [10 pts] Links to the complete and correct [hello-world/build.xml](hello-world/build.xml) and [hello-world/ivy.xml](hello-world/ivy.xml) files.
 
+hw4-katieqcush/hello-world/build.xml
+hw4-katieqcush/hello-world/ivy.xml
 
 
 # Maven [30 pts]
